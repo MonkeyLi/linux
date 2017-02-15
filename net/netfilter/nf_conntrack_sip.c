@@ -1060,7 +1060,7 @@ static int process_sdp(struct sk_buff *skb, unsigned int protoff,
 
 		ret = set_expected_rtp_rtcp(skb, protoff, dataoff,
 					    dptr, datalen,
-					    &rtp_addr, htons(port), t->class,
+					    &rtp_addr, port, t->class,
 					    mediaoff, medialen);
 		if (ret != NF_ACCEPT) {
 			nf_ct_helper_log(skb, ct,
